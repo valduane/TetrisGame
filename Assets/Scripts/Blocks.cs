@@ -6,13 +6,17 @@ using UnityEngine.SceneManagement;
 public class Blocks : MonoBehaviour
 {
 
-    float falling;
+    float falling = 0f;
     public AudioClip BreakSound;
-    TouchPad touchpad;
+
+    static public float toFall = 1f;
+    float n = 0.1f;
+
+	public static float toFall = 1f;
+
 
     void Start()
     {
-        touchpad.site = 0;
         if (!isDontCollide())
         {
             int SceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
@@ -23,10 +27,12 @@ public class Blocks : MonoBehaviour
     
     void Update()
     {
+        
         Movement();
+        //SpeedStatus();
     }
 
-   public bool isDontCollide()
+    bool isDontCollide()
     {
         foreach (Transform child in transform)
         {
@@ -55,15 +61,22 @@ public class Blocks : MonoBehaviour
 
     void Movement()
     {
-        if (touchpad.site == 1)
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            left();
-            touchpad.site = 0;
+            transform.position += new Vector3(-1, 0, 0);
+            if (isDontCollide())
+                updateGrid();
+            else
+                transform.position += new Vector3(1, 0, 0);
         }
-        else if (touchpad.site == 2)
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            right();
-            touchpad.site = 0;
+            transform.position += new Vector3(1, 0, 0);
+
+            if (isDontCollide())
+                updateGrid();
+            else
+                transform.position += new Vector3(-1, 0, 0);
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
@@ -73,7 +86,7 @@ public class Blocks : MonoBehaviour
             else
                 transform.Rotate(0, 0, 90);
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow) || Time.time - falling >= 1)
+        else if (Input.GetKeyDown(KeyCode.DownArrow) || Time.time - falling >= toFall)
         {
             transform.position += new Vector3(0, -1, 0);
             if (isDontCollide())
@@ -91,27 +104,16 @@ public class Blocks : MonoBehaviour
             falling = Time.time;
         }
     }
-
-    void left()
+    
+    void SpeedStatus()
     {
-        transform.position += new Vector3(-1, 0, 0);
-        if (isDontCollide())
-            updateGrid();
-        else
-            transform.position += new Vector3(1, 0, 0);
+        bool stat = Boundaries.SpeedOfGame();
+        if (stat)
+        {
+            toFall -= 0.5f;
+            stat = false;
+            Debug.Log(toFall);
+        }
     }
-
-    void right()
-    {
-        transform.position += new Vector3(1, 0, 0);
-
-        if (isDontCollide())
-            updateGrid();
-        else
-            transform.position += new Vector3(-1, 0, 0);
-    }
-
-
-
 }
 
