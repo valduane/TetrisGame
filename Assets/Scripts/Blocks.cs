@@ -12,7 +12,7 @@ public class Blocks : MonoBehaviour
 
     void Start()
     {
-        touchpad.site = 0;
+        //touchpad.site = 0;
         if (!isDontCollide())
         {
             int SceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
@@ -55,7 +55,7 @@ public class Blocks : MonoBehaviour
 
     void Movement()
     {
-        if (touchpad.site == 1)
+        /*if (touchpad.site == 1)
         {
             left();
             touchpad.site = 0;
@@ -64,6 +64,24 @@ public class Blocks : MonoBehaviour
         {
             right();
             touchpad.site = 0;
+        }
+        */
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            transform.position += new Vector3(-1, 0, 0);
+
+            if (isDontCollide())
+                updateGrid();
+            else
+                transform.position += new Vector3(1, 0, 0);
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            transform.position += new Vector3(1, 0, 0);
+            if (isDontCollide())
+                updateGrid();
+            else
+                transform.position += new Vector3(-1, 0, 0);
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
@@ -92,7 +110,7 @@ public class Blocks : MonoBehaviour
         }
     }
 
-    void left()
+  /*  void left()
     {
         transform.position += new Vector3(-1, 0, 0);
         if (isDontCollide())
@@ -111,7 +129,13 @@ public class Blocks : MonoBehaviour
             transform.position += new Vector3(-1, 0, 0);
     }
 
+    */
 
-
+   /* void CheckForSpeed()
+    {
+        if (Boundaries.SpeedOfGame)
+            falling += 0.1;
+    }
+    */
 }
 

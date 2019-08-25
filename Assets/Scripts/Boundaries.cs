@@ -9,6 +9,7 @@ public class Boundaries : MonoBehaviour
     public static int h = 20;
     public static Transform[,] grid = new Transform[w, h];
     static int score = 0;
+    int speed = 0;
     [SerializeField] TextMeshProUGUI scoreText;
     
 
@@ -84,4 +85,16 @@ public class Boundaries : MonoBehaviour
             }
         }
     }
+
+    public int SpeedOfGame()
+    {
+        if (score % 100 == 0)
+        {
+            return (speed = 1);
+        }
+        else
+            return (speed = 0);
+    }
+
+
 }
