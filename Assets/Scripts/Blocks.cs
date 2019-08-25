@@ -12,7 +12,7 @@ public class Blocks : MonoBehaviour
     static public float toFall = 1f;
     float n = 0.1f;
 
-	public static float toFall = 1f;
+	
 
 
     void Start()
@@ -21,6 +21,7 @@ public class Blocks : MonoBehaviour
         {
             int SceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
             SceneManager.LoadScene(SceneIndex);
+            PlayerPrefs.SetInt("BestScore", Boundaries.score);
         }
     }
 
