@@ -8,9 +8,8 @@ public class Blocks : MonoBehaviour
 
     float falling = 0f;
     public AudioClip BreakSound;
-
     static public float toFall = 1f;
-    float n = 0.1f;
+
 
 	
 
@@ -21,7 +20,6 @@ public class Blocks : MonoBehaviour
         {
             int SceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
             SceneManager.LoadScene(SceneIndex);
-            PlayerPrefs.SetInt("BestScore", Boundaries.score);
         }
     }
 
