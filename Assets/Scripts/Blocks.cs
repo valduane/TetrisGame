@@ -10,16 +10,13 @@ public class Blocks : MonoBehaviour
     public AudioClip BreakSound;
     static public float toFall = 1f;
 
-
-	
-
-
     void Start()
     {
         if (!isDontCollide())
         {
             int SceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
             SceneManager.LoadScene(SceneIndex);
+            Boundaries.score = 0;
         }
     }
 
