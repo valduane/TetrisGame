@@ -6,6 +6,7 @@ public class Spawn : MonoBehaviour
 {
 
     public GameObject[] myBlocks;
+    public GameObject[] blocksInGame;
     private int _index;
 
     void Start()
@@ -23,7 +24,7 @@ public class Spawn : MonoBehaviour
     public void Next()
     {
             Instantiate(myBlocks[_index], transform.position, Quaternion.identity);
-            _index = Random.Range(0, myBlocks.Length);
+            _index = Random.Range(0, blocksInGame.Length);
     }
 
     private void _PlayerNext()
@@ -40,4 +41,23 @@ public class Spawn : MonoBehaviour
             _index = 3;
     }
 
+    void isGBlock()
+    {
+        blocksInGame[0] = myBlocks[0];
+    }
+
+    void isSquare()
+    {
+        blocksInGame[1] = myBlocks[1];
+    }
+    
+    void isStick()
+    {
+        blocksInGame[2] = myBlocks[2];
+    }
+
+    void isTBlock()
+    {
+        blocksInGame[3] = myBlocks[4];
+    }
 }
