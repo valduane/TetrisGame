@@ -12,6 +12,7 @@ public class Blocks : MonoBehaviour
 
     void Start()
     {
+        //touchpad.site = 0;
         if (!isDontCollide())
         {
             int SceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
@@ -69,6 +70,24 @@ public class Blocks : MonoBehaviour
         {
             transform.position += new Vector3(1, 0, 0);
 
+            if (isDontCollide())
+                updateGrid();
+            else
+                transform.position += new Vector3(-1, 0, 0);
+        }
+        */
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            transform.position += new Vector3(-1, 0, 0);
+
+            if (isDontCollide())
+                updateGrid();
+            else
+                transform.position += new Vector3(1, 0, 0);
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            transform.position += new Vector3(1, 0, 0);
             if (isDontCollide())
                 updateGrid();
             else
