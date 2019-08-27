@@ -28,14 +28,4 @@ public class SceneLoader : MonoBehaviour
         int SceneIndex = SceneManager.GetActiveScene().buildIndex - 1;
         SceneManager.LoadScene(SceneIndex);
     }
-
-    public void GameMode()
-    {
-        SceneManager.LoadScene(3);
-    }
-
-    public void Choose_of_share()
-    {
-        SceneManager.LoadScene(4);
-    }
 }
