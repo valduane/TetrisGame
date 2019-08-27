@@ -61,24 +61,6 @@ public class Blocks : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             transform.position += new Vector3(-1, 0, 0);
-            if (isDontCollide())
-                updateGrid();
-            else
-                transform.position += new Vector3(1, 0, 0);
-        }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            transform.position += new Vector3(1, 0, 0);
-
-            if (isDontCollide())
-                updateGrid();
-            else
-                transform.position += new Vector3(-1, 0, 0);
-        }
-        */
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            transform.position += new Vector3(-1, 0, 0);
 
             if (isDontCollide())
                 updateGrid();
@@ -93,7 +75,7 @@ public class Blocks : MonoBehaviour
             else
                 transform.position += new Vector3(-1, 0, 0);
         }
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        else if (Input.GetKeyDown(KeyCode.UpArrow) && tag != "Square")
         {
             transform.Rotate(0, 0, -90);
             if (isDontCollide())

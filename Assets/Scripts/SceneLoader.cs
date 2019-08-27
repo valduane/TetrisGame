@@ -5,38 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    public void LoadNextScene()
-    {
-		
-        int SceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(SceneIndex + 1);
-
-    }
-
     public void LoadStartScene()
     {
-        int SceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(SceneIndex = 0);
+        SceneManager.LoadScene("StartScene");
     }
 
-    public void quit()
+    public void Quit()
     {
         Application.Quit();
     }
 
     public void Game()
     {
-        int SceneIndex = SceneManager.GetActiveScene().buildIndex - 1;
-        SceneManager.LoadScene(SceneIndex);
+        SceneManager.LoadScene("Game");
     }
 
     public void GameMode()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("GameMode");
     }
 
-    public void Choose_of_share()
+    public void ChooseOfShare()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene("Choose_of_share");
     }
 }
