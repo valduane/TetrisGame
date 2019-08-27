@@ -5,9 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    public void LoadNextScene()
+    {
+        int SceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(SceneIndex + 1);
+
+    }
+
     public void LoadStartScene()
     {
-        SceneManager.LoadScene("StartScene");
+        int SceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(SceneIndex = 0);
     }
 
     public void quit()
@@ -17,16 +25,17 @@ public class SceneLoader : MonoBehaviour
 
     public void Game()
     {
-        SceneManager.LoadScene("Game");
+        int SceneIndex = SceneManager.GetActiveScene().buildIndex - 1;
+        SceneManager.LoadScene(SceneIndex);
     }
 
     public void GameMode()
     {
-        SceneManager.LoadScene("GameMode");
+        SceneManager.LoadScene(3);
     }
 
     public void Choose_of_share()
     {
-        SceneManager.LoadScene("Choose_of_share");
+        SceneManager.LoadScene(4);
     }
 }

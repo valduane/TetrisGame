@@ -16,7 +16,7 @@ public class Blocks : MonoBehaviour
         if (!isDontCollide())
         {
             int SceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-            SceneManager.LoadScene("Lose");
+            SceneManager.LoadScene(SceneIndex);
             Boundaries.score = 0;
         }
     }
@@ -75,6 +75,7 @@ public class Blocks : MonoBehaviour
             else
                 transform.position += new Vector3(-1, 0, 0);
         }
+        */
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             transform.position += new Vector3(-1, 0, 0);
