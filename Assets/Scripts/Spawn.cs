@@ -11,6 +11,7 @@ public class Spawn : MonoBehaviour
     public bool SerchShare = true;
     public int index;
 
+
     void Start()
     {
         Next();
@@ -19,7 +20,6 @@ public class Spawn : MonoBehaviour
 
     void Update()
     {
-
     }
     public void ClickStart()
     {
@@ -82,9 +82,4 @@ public class Spawn : MonoBehaviour
             index = Random.Range(0, myBlocks.Length);
             Instantiate(myBlocks[index], transform.position, Quaternion.identity);
         }
-   
-    }
-
-
-
-}
+ 

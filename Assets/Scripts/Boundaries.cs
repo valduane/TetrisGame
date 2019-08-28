@@ -8,13 +8,21 @@ public class Boundaries : MonoBehaviour
     public static int w = 10;
     public static int h = 20;
     public static Transform[,] grid = new Transform[w, h];
-    static int score = 0;
-    int speed = 0;
+    public static int score = 0;
+    static int numb = 20;
     [SerializeField] TextMeshProUGUI scoreText;
-    
+    [SerializeField] TextMeshProUGUI BestScoreText;
+    static public float speed;
+    public int BestScore = 0;
+
+    void Awake()
+    {
+        bestScore();
+    }
 
     void Start()
-    {
+    { 
+        BestScoreText.text = BestScore.ToString();
         scoreText.text = score.ToString();
     }
 
@@ -82,19 +90,33 @@ public class Boundaries : MonoBehaviour
                 above(y + 1);
                 --y;
                 score += 20;
+                Blocks.toFall -= 0.05f;
+                PlayerPrefs.SetInt("BestScore", score);
             }
         }
     }
 
-    public int SpeedOfGame()
+   static public bool SpeedOfGame()
     {
-        if (score % 100 == 0)
+        bool speedStat = false;
+        if (score > numb)
         {
-            return (speed = 1);
+            numb = numb + 100;
+            return (speedStat = true);
+            Debug.Log(numb);
         }
         else
-            return (speed = 0);
+            return (speedStat = false);
     }
 
-
+    void bestScore()
+    {
+        BestScore = PlayerPrefs.GetInt("TheBestScore");
+        int temp = PlayerPrefs.GetInt("BestScore");
+        if (temp > BestScore)
+        {
+            BestScore = temp;
+            PlayerPrefs.SetInt("TheBestScore", BestScore);
+        }
+    }
 }
