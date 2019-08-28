@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{D2BFFF02-D087-DB1A-C7FE-6538A965A290}</ProjectGuid>
+    <ProjectGuid>{1D93DF70-372E-AD32-FE32-7056020C957D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,6 +53,45 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Lean\Common\Examples\Scripts\LeanCircuit.cs" />
+     <Compile Include="Assets\Lean\Common\Examples\Scripts\LeanDocumentation.cs" />
+     <Compile Include="Assets\Lean\Common\Examples\Scripts\LeanMarker.cs" />
+     <Compile Include="Assets\Lean\Common\Examples\Scripts\LeanOpenUrl.cs" />
+     <Compile Include="Assets\Lean\Common\Scripts\LeanHelper.cs" />
+     <Compile Include="Assets\Lean\Common\Scripts\LeanInspector.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanCameraMove.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanCameraZoom.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanCanvasArrow.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanDestroy.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanFingerData.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanFingerDown.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanFingerHeld.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanFingerLine.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanFingerSet.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanFingerSwipe.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanFingerTap.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanFingerTrail.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanFingerUp.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanOpenUrl.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanPath.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanPlane.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanRotate.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanRotateCustomAxis.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanScale.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanScreenDepth.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanSelect.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanSelectable.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanSelectableBehaviour.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanSelectableGraphicColor.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanSelectableRendererColor.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanSelectableSpriteRendererColor.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanSpawn.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanTouchEvents.cs" />
+     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanTranslate.cs" />
+     <Compile Include="Assets\Lean\Touch\Scripts\LeanFinger.cs" />
+     <Compile Include="Assets\Lean\Touch\Scripts\LeanGesture.cs" />
+     <Compile Include="Assets\Lean\Touch\Scripts\LeanSnapshot.cs" />
+     <Compile Include="Assets\Lean\Touch\Scripts\LeanTouch.cs" />
      <Compile Include="Assets\Scripts\Blocks.cs" />
      <Compile Include="Assets\Scripts\Boundaries.cs" />
      <Compile Include="Assets\Scripts\SceneLoader.cs" />
@@ -93,39 +132,44 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\Lean\Common\Examples\Shaders\Alpha.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\Lean\Common\Examples\Fonts\OFL.txt" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\Lean\Common\Examples\Shaders\Skybox.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\Lean\READ ME.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+     <None Include="Assets\Lean\Common\Examples\Shaders\Object.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/Admin/Desktop/project/MyGame/Tetris/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/Admin/Desktop/project/TetrisGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/Admin/Desktop/project/MyGame/Tetris/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/Admin/Desktop/project/TetrisGame/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/Users/Admin/Desktop/project/MyGame/Tetris/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>C:/Users/Admin/Desktop/project/TetrisGame/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/Admin/Desktop/project/MyGame/Tetris/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/Admin/Desktop/project/TetrisGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>C:/Users/Admin/Desktop/project/MyGame/Tetris/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>C:/Users/Admin/Desktop/project/TetrisGame/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -326,19 +370,19 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Users/Admin/Desktop/project/MyGame/Tetris/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.dll</HintPath>
+ <HintPath>C:/Users/Admin/Desktop/project/TetrisGame/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements.Editor">
- <HintPath>C:/Users/Admin/Desktop/project/MyGame/Tetris/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.Editor.dll</HintPath>
+ <HintPath>C:/Users/Admin/Desktop/project/TetrisGame/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>C:/Users/Admin/Desktop/project/MyGame/Tetris/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>C:/Users/Admin/Desktop/project/TetrisGame/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>C:/Users/Admin/Desktop/project/MyGame/Tetris/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/Admin/Desktop/project/TetrisGame/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>C:/Users/Admin/Desktop/project/MyGame/Tetris/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>C:/Users/Admin/Desktop/project/TetrisGame/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

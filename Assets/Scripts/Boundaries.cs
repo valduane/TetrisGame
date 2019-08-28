@@ -22,7 +22,7 @@ public class Boundaries : MonoBehaviour
 
     void Start()
     { 
-        BestScoreText.text = BestScore.ToString();
+      //  BestScoreText.text = BestScore.ToString();
         scoreText.text = score.ToString();
     }
 
@@ -119,4 +119,7 @@ public class Boundaries : MonoBehaviour
             PlayerPrefs.SetInt("TheBestScore", BestScore);
         }
     }
+
+
+    
 }

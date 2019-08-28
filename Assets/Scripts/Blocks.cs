@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Blocks : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class Blocks : MonoBehaviour
     float falling = 0f;
     public AudioClip BreakSound;
     static public float toFall = 1f;
+    Vector2 moveDirection = Vector2.zero;
 
     void Start()
     {
@@ -21,11 +24,12 @@ public class Blocks : MonoBehaviour
         }
     }
 
-    
+
     void Update()
     {
-        
-        Movement();
+        if (tag == "Block" || tag == "Square")
+            Movement();
+        Touches();
         //SpeedStatus();
     }
 
@@ -61,7 +65,6 @@ public class Blocks : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             transform.position += new Vector3(-1, 0, 0);
-
             if (isDontCollide())
                 updateGrid();
             else
@@ -98,13 +101,14 @@ public class Blocks : MonoBehaviour
                 {
                     AudioSource.PlayClipAtPoint(BreakSound, Camera.main.transform.position);
                 }
+                gameObject.tag = "Dead";
                 FindObjectOfType<Spawn>().Next();
                 enabled = false;
             }
             falling = Time.time;
         }
     }
-    
+
     void SpeedStatus()
     {
         bool stat = Boundaries.SpeedOfGame();
@@ -115,5 +119,74 @@ public class Blocks : MonoBehaviour
             Debug.Log(toFall);
         }
     }
+
+    public void LeftMovement()
+    {
+        transform.position += new Vector3(-1, 0, 0);
+        if (isDontCollide())
+            updateGrid();
+        else
+            transform.position += new Vector3(1, 0, 0);
+    }
+
+    public void RightMovement()
+    {
+        transform.position += new Vector3(1, 0, 0);
+        if (isDontCollide())
+            updateGrid();
+        else
+            transform.position += new Vector3(-1, 0, 0);
+    }
+
+    public void DownMovement()
+    {
+        if (tag != "Dead")
+        {
+            transform.position += new Vector3(0, -1, 0);
+            if (isDontCollide())
+            {
+                updateGrid();
+            }
+            else
+            {
+                transform.position += new Vector3(0, 1, 0);
+                Boundaries.deleteAll();
+                if (SceneManager.GetActiveScene().buildIndex != 4)
+                {
+                    AudioSource.PlayClipAtPoint(BreakSound, Camera.main.transform.position);
+                }
+                gameObject.tag = "Dead";
+                FindObjectOfType<Spawn>().Next();
+                enabled = false;
+            }
+            falling = Time.time;
+        }
+    }
+
+    void Touches()
+    {
+        if (tag != "Dead")
+ { 
+        if (Input.touchCount > 0)
+        {
+            Touch myTouch = Input.GetTouch(0);
+            if (myTouch.phase == TouchPhase.Moved)
+            {
+                Vector2 posChange = myTouch.deltaPosition;
+                posChange.y = -posChange.y;
+                moveDirection = posChange.normalized;
+            }
+            Debug.Log(moveDirection);
+            if (moveDirection.x == 1)
+                RightMovement();
+            else if (moveDirection.x == -1)
+                LeftMovement();
+            moveDirection = Vector2.zero;
+        }
+    }
+}
+
+
+
 }
 
