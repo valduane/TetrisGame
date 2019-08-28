@@ -94,7 +94,10 @@ public class Blocks : MonoBehaviour
             {
                 transform.position += new Vector3(0, 1, 0);
                 Boundaries.deleteAll();
-                AudioSource.PlayClipAtPoint(BreakSound, Camera.main.transform.position);
+                if (SceneManager.GetActiveScene().buildIndex != 4)
+                {
+                    AudioSource.PlayClipAtPoint(BreakSound, Camera.main.transform.position);
+                }
                 FindObjectOfType<Spawn>().Next();
                 enabled = false;
             }
