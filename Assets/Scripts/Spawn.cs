@@ -7,7 +7,7 @@ public class Spawn : MonoBehaviour
     public GameObject[] myBlocks;
     public int variantSpawn;
     public int numbersChooseBlock;
-    public int[] numberBlock;
+    public int[] numberBlock=new int[4];
     public bool SerchShare = true;
     public int index;
 
@@ -21,7 +21,11 @@ public class Spawn : MonoBehaviour
     {
 
     }
+    public void ClickStart()
+    {
+        variantSpawn = 1;
 
+    }
     public void RememberShareZ()
     { 
         for(int i=0;i<=numbersChooseBlock;i++)
@@ -67,9 +71,10 @@ public class Spawn : MonoBehaviour
     
     public void Next()
     {
+        Debug.Log(variantSpawn);
         if (variantSpawn == 1)
         {
-            index = Random.Range(0, numbersChooseBlock);
+            index = Random.Range(0, numbersChooseBlock-1);
             Instantiate(myBlocks[numberBlock[index]], transform.position, Quaternion.identity);
         }
         else
