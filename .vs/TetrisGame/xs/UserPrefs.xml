@@ -1,13 +1,5 @@
 ﻿<Properties StartupConfiguration="{1D93DF70-372E-AD32-FE32-7056020C957D}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Spawn.cs">
-    <Files>
-      <File FileName="Assets/Scripts/SceneLoader.cs" Line="31" Column="42" />
-      <File FileName="Assets/Scripts/Blocks.cs" Line="19" Column="13" />
-      <File FileName="Assets/Scripts/Boundaries.cs" Line="25" Column="1" />
-      <File FileName="Assets/Scripts/Spawn.cs" Line="38" Column="33" />
-      <File FileName="Assets/Scripts/test.cs" Line="20" Column="1" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="72d64421-24ff-4c96-bb6b-3d1af2d6b765" />

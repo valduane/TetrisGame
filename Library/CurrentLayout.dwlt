@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 398}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -44,8 +44,8 @@ MonoBehaviour:
     y: 30
     width: 1280
     height: 706
-  m_MinSize: {x: 683, y: 348}
-  m_MaxSize: {x: 12008, y: 8048}
+  m_MinSize: {x: 683, y: 498}
+  m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
   controlID: 75
 --- !u!114 &3
@@ -119,14 +119,14 @@ MonoBehaviour:
     y: 429
     width: 975
     height: 277
-  m_MinSize: {x: 102, y: 124}
-  m_MaxSize: {x: 4002, y: 4024}
-  m_ActualView: {fileID: 18}
+  m_MinSize: {x: 232, y: 274}
+  m_MaxSize: {x: 10002, y: 10024}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
   - {fileID: 18}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -149,7 +149,7 @@ MonoBehaviour:
     y: 0
     width: 1280
     height: 756
-  m_MinSize: {x: 950, y: 398}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -215,8 +215,8 @@ MonoBehaviour:
     y: 0
     width: 975
     height: 706
-  m_MinSize: {x: 406, y: 348}
-  m_MaxSize: {x: 8006, y: 8048}
+  m_MinSize: {x: 406, y: 498}
+  m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
   controlID: 76
 --- !u!114 &10
@@ -402,8 +402,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 68290000
-    m_LastClickedInstanceID: 10600
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
@@ -496,9 +496,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 68290000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 54f8ffff60f8ffff92faffff5efbffff86fbffffd4fbffff262d0000
+      m_SelectedIDs: c8520000
+      m_LastClickedID: 21192
+      m_ExpandedIDs: cad4ffffdad4ffff38d8ffff6cd9ffff84dbffff4cdcffff6addffff9cedffffe6edffff22f6ffff9ef8ffff1efbffff42fbffff52fbffff5efbffff6afbffffd4fbffff622e00005c4800004e4e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -514,7 +514,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 4}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -546,7 +546,7 @@ MonoBehaviour:
     x: 285
     y: 75
     width: 686
-    height: 408
+    height: 409
   m_PersistentViewDataDictionary: {fileID: 0}
   m_WindowGUID: 4f77b9d75caa54f5aa0ffbe6757a2da6
   m_SceneLighting: 1
@@ -554,9 +554,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.9776847, y: 3.761147, z: -0.5265055}
+    m_Target: {x: 5.021861, y: 10.974614, z: -0.4661024}
     speed: 2
-    m_Value: {x: 0.9776847, y: 3.761147, z: -0.5265055}
+    m_Value: {x: 5.021861, y: 10.974614, z: -0.4661024}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -588,9 +588,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 43.811764
+    m_Target: 16.868658
     speed: 2
-    m_Value: 43.811764
+    m_Value: 16.868658
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -638,10 +638,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -640
-    m_HBaseRangeMax: 640
-    m_VBaseRangeMin: -360
-    m_VBaseRangeMax: 360
+    m_HBaseRangeMin: -171.5
+    m_HBaseRangeMax: 171.5
+    m_VBaseRangeMin: -98
+    m_VBaseRangeMax: 98
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -661,7 +661,7 @@ MonoBehaviour:
       y: 17
       width: 686
       height: 392
-    m_Scale: {x: 0.5359375, y: 0.5359375}
+    m_Scale: {x: 2, y: 2}
     m_Translation: {x: 343, y: 196}
     m_MarginLeft: 0
     m_MarginRight: 0

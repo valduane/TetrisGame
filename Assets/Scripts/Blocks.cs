@@ -16,7 +16,7 @@ public class Blocks : MonoBehaviour
       
         if (!isDontCollide()&&(SceneManager.GetActiveScene().buildIndex!=4))
         {
-            
+            PlayerPrefs.SetInt("variantSpawn", 0);
             SceneManager.LoadScene("Lose");
             Boundaries.score = 0;
         }

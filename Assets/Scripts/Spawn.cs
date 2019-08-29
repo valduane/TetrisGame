@@ -37,10 +37,13 @@ public class Spawn : MonoBehaviour
         PlayerPrefs.DeleteKey("2");
         PlayerPrefs.DeleteKey("3");
         PlayerPrefs.DeleteKey("4");
+        PlayerPrefs.DeleteKey("5");
+        PlayerPrefs.DeleteKey("6");
+        PlayerPrefs.DeleteKey("7");
+
     }
     public void RememberShareZ()
     {
-        Debug.Log("sd");
         if (PlayerPrefs.GetInt("1") == 0)
         {
             PlayerPrefs.SetInt("1", 1);
@@ -86,21 +89,68 @@ public class Spawn : MonoBehaviour
         }
     }
 
+    public void RememberShareG()
+    {
+        if (PlayerPrefs.GetInt("5") == 0)
+        {
+            PlayerPrefs.SetInt("5", 5);
+            numbersChooseBlock = PlayerPrefs.GetInt("number");
+            numbersChooseBlock++;
+            Debug.Log(numbersChooseBlock);
+            PlayerPrefs.SetInt("number", numbersChooseBlock);
+        }
+    }
+
+    public void RememberShareS()
+    {
+        if (PlayerPrefs.GetInt("6") == 0)
+        {
+            PlayerPrefs.SetInt("6", 6);
+            numbersChooseBlock = PlayerPrefs.GetInt("number");
+            numbersChooseBlock++;
+            Debug.Log(numbersChooseBlock);
+            PlayerPrefs.SetInt("number", numbersChooseBlock);
+        }
+    }
+
+    public void RememberShareL()
+    {
+        if (PlayerPrefs.GetInt("7") == 0)
+        {
+            PlayerPrefs.SetInt("7", 7);
+            numbersChooseBlock = PlayerPrefs.GetInt("number");
+            numbersChooseBlock++;
+            Debug.Log(numbersChooseBlock);
+            PlayerPrefs.SetInt("number", numbersChooseBlock);
+        }
+    }
+
+
+
+
 
     public void Next()
     {
       
         variantSpawn=PlayerPrefs.GetInt("variantSpawn");
-        Debug.Log(variantSpawn);
+    
 
         if (variantSpawn == 1)
         {
-            numbersChooseBlock=PlayerPrefs.GetInt("number");
+            int n = 0;
+            numbersChooseBlock =PlayerPrefs.GetInt("number");
+      
+            index = Random.Range(0, numbersChooseBlock);
             Debug.Log(numbersChooseBlock);
-            index = Random.Range(0, numbersChooseBlock-1);
-            for(int i=1;i<= numbersChooseBlock;i++)
+            Debug.Log(index);
+            for (int i=1;i<=7;i++)
             {
-                nBlock[i-1]= PlayerPrefs.GetInt(i.ToString());
+                
+                if (PlayerPrefs.GetInt(i.ToString()) != 0)
+                {
+                    nBlock[n] = PlayerPrefs.GetInt(i.ToString())-1;
+                    n++;
+                }
             }
             Debug.Log(nBlock[index]);
             Instantiate(myBlocks[nBlock[index]], transform.position, Quaternion.identity);
