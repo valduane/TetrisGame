@@ -13,10 +13,11 @@ public class Blocks : MonoBehaviour
     void Start()
     {
         //touchpad.site = 0;
-        if (!isDontCollide())
+      
+        if (!isDontCollide()&&(SceneManager.GetActiveScene().buildIndex!=4))
         {
-            int SceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-            SceneManager.LoadScene(SceneIndex);
+            
+            SceneManager.LoadScene("Lose");
             Boundaries.score = 0;
         }
     }
@@ -24,8 +25,8 @@ public class Blocks : MonoBehaviour
     
     void Update()
     {
-        
-        Movement();
+        if (SceneManager.GetActiveScene().buildIndex != 4)
+            Movement();
         //SpeedStatus();
     }
 

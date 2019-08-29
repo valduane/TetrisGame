@@ -271,7 +271,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 988015384}
-        m_MethodName: Choose_of_share
+        m_MethodName: ChooseOfShare
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 988015386}
+        m_MethodName: ClickModeSetOfShare
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -540,12 +551,36 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 988015383}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 988015385}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a47575f9066c9b641879260bd76995be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &988015385 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7100683253326775835, guid: 6a4cb5a9f2aee2c41b6d447dd9efc7aa,
+    type: 3}
+  m_PrefabInstance: {fileID: 988015383}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &988015386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988015385}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40513eb73221d5b4dbd6eeafa36129ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myBlocks: []
+  variantSpawn: 0
+  numbersChooseBlock: 0
+  nBlock: 
+  SerchShare: 1
+  index: 0
 --- !u!1 &1187358686
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,6 +28,6 @@ public class SceneLoader : MonoBehaviour
 
     public void ChooseOfShare()
     {
-        SceneManager.LoadScene("Choose_of_share");
+        SceneManager.LoadScene("ChooseOfShare");
     }
 }
