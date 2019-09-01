@@ -12,6 +12,7 @@ public class Blocks : MonoBehaviour
     public AudioClip BreakSound;
     static public float toFall = 1f;
     Vector2 moveDirection = Vector2.zero;
+    float side = 0f;
 
     void Start()
     {
@@ -163,26 +164,36 @@ public class Blocks : MonoBehaviour
         }
     }
 
+    void Up()
+    {
+        if (tag != "Square")
+        {
+            transform.Rotate(0, 0, -90);
+            if (isDontCollide())
+                updateGrid();
+            else
+                transform.Rotate(0, 0, 90);
+        }
+    }
     void Touches()
     {
         if (tag != "Dead")
  { 
-        if (Input.touchCount > 0)
+        if (Input.touchCount > 0 && Time.time - side >= 0.3f)
         {
-            Touch myTouch = Input.GetTouch(0);
-            if (myTouch.phase == TouchPhase.Moved)
-            {
-                Vector2 posChange = myTouch.deltaPosition;
-                posChange.y = -posChange.y;
-                moveDirection = posChange.normalized;
-            }
-            Debug.Log(moveDirection);
-            if (moveDirection.x == 1)
+                Touch touch = Input.GetTouch(0);
+                Vector2 posOnScreen = touch.position;
+                if (posOnScreen.x >= 875)
                 RightMovement();
-            else if (moveDirection.x == -1)
+            else if (posOnScreen.x < 480)
                 LeftMovement();
-            moveDirection = Vector2.zero;
-        }
+            else if (posOnScreen.y > 380)
+                    Up();
+                else if (posOnScreen.y < 380)
+                    DownMovement();
+                Debug.Log(posOnScreen);
+                side = Time.time;
+            }
     }
 }
 
