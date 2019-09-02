@@ -9,6 +9,8 @@ TagManager:
   - Block
   - Square
 
+  - Dead
+
   layers:
   - Default
   - TransparentFX

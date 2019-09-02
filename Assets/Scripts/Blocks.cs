@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Blocks : MonoBehaviour
 {
@@ -9,12 +11,12 @@ public class Blocks : MonoBehaviour
     float falling = 0f;
     public AudioClip BreakSound;
     static public float toFall = 1f;
+    Vector2 moveDirection = Vector2.zero;
+    float side = 0f;
 
     void Start()
     {
-        //touchpad.site = 0;
-      
-        if (!isDontCollide()&&(SceneManager.GetActiveScene().buildIndex!=4))
+
         {
             PlayerPrefs.SetInt("variantSpawn", 0);
             SceneManager.LoadScene("Lose");
@@ -22,12 +24,13 @@ public class Blocks : MonoBehaviour
         }
     }
 
-    
+
     void Update()
     {
-        if (SceneManager.GetActiveScene().buildIndex != 4)
+        if (tag == "Block" || tag == "Square")
             Movement();
-        //SpeedStatus();
+        Touches();
+
     }
 
     bool isDontCollide()
@@ -62,7 +65,6 @@ public class Blocks : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             transform.position += new Vector3(-1, 0, 0);
-
             if (isDontCollide())
                 updateGrid();
             else
@@ -99,13 +101,14 @@ public class Blocks : MonoBehaviour
                 {
                     AudioSource.PlayClipAtPoint(BreakSound, Camera.main.transform.position);
                 }
+                gameObject.tag = "Dead";
                 FindObjectOfType<Spawn>().Next();
                 enabled = false;
             }
             falling = Time.time;
         }
     }
-    
+
     void SpeedStatus()
     {
         bool stat = Boundaries.SpeedOfGame();
@@ -116,5 +119,84 @@ public class Blocks : MonoBehaviour
             Debug.Log(toFall);
         }
     }
+
+    public void LeftMovement()
+    {
+        transform.position += new Vector3(-1, 0, 0);
+        if (isDontCollide())
+            updateGrid();
+        else
+            transform.position += new Vector3(1, 0, 0);
+    }
+
+    public void RightMovement()
+    {
+        transform.position += new Vector3(1, 0, 0);
+        if (isDontCollide())
+            updateGrid();
+        else
+            transform.position += new Vector3(-1, 0, 0);
+    }
+
+    public void DownMovement()
+    {
+        if (tag != "Dead")
+        {
+            transform.position += new Vector3(0, -1, 0);
+            if (isDontCollide())
+            {
+                updateGrid();
+            }
+            else
+            {
+                transform.position += new Vector3(0, 1, 0);
+                Boundaries.deleteAll();
+                if (SceneManager.GetActiveScene().buildIndex != 4)
+                {
+                    AudioSource.PlayClipAtPoint(BreakSound, Camera.main.transform.position);
+                }
+                gameObject.tag = "Dead";
+                FindObjectOfType<Spawn>().Next();
+                enabled = false;
+            }
+            falling = Time.time;
+        }
+    }
+
+    void Up()
+    {
+        if (tag != "Square")
+        {
+            transform.Rotate(0, 0, -90);
+            if (isDontCollide())
+                updateGrid();
+            else
+                transform.Rotate(0, 0, 90);
+        }
+    }
+    void Touches()
+    {
+        if (tag != "Dead")
+ { 
+        if (Input.touchCount > 0 && Time.time - side >= 0.3f)
+        {
+                Touch touch = Input.GetTouch(0);
+                Vector2 posOnScreen = touch.position;
+                if (posOnScreen.x >= 875)
+                RightMovement();
+            else if (posOnScreen.x < 480)
+                LeftMovement();
+            else if (posOnScreen.y > 380)
+                    Up();
+                else if (posOnScreen.y < 380)
+                    DownMovement();
+                Debug.Log(posOnScreen);
+                side = Time.time;
+            }
+    }
+}
+
+
+
 }
 
