@@ -577,8 +577,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   m_LocalScale: {x: 1.5465881, y: 1.5379411, z: 1}
+=======
+  m_LocalScale: {x: 1.3289063, y: 1.4623, z: 1}
+>>>>>>> parent of d430873... Some fixex (Best score added)
 =======
   m_LocalScale: {x: 1.3289063, y: 1.4623, z: 1}
 >>>>>>> parent of d430873... Some fixex (Best score added)
@@ -592,6 +596,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   m_AnchorMin: {x: 0.245, y: 0.18625}
   m_AnchorMax: {x: 0.7515484, y: 0.33425}
@@ -601,11 +606,16 @@ RectTransform:
 =======
 =======
 >>>>>>> parent of d430873... Some fixex (Best score added)
+=======
+>>>>>>> parent of d430873... Some fixex (Best score added)
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -2, y: -350}
   m_SizeDelta: {x: 971, y: 140}
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of d430873... Some fixex (Best score added)
+=======
 >>>>>>> parent of d430873... Some fixex (Best score added)
 =======
 >>>>>>> parent of d430873... Some fixex (Best score added)
