@@ -214,8 +214,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 63399652}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9, y: 7.7905855, z: 48.754414}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -241.9, y: -392.2094, z: 48.754414}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2142728156}
@@ -235,8 +235,8 @@ Transform:
   - {fileID: 977277815}
   - {fileID: 1374572357}
   - {fileID: 1219382776}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1557761328}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &152042809
 GameObject:
@@ -817,8 +817,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 606489145}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.098495, y: 7.7905855, z: 48.754414}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -230.9015, y: -392.2094, z: 48.754414}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1763370645}
@@ -838,8 +838,8 @@ Transform:
   - {fileID: 880562718}
   - {fileID: 460785840}
   - {fileID: 519951649}
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1557761328}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &613505794
 GameObject:
@@ -2578,6 +2578,8 @@ RectTransform:
   m_Children:
   - {fileID: 1383842666}
   - {fileID: 1236195335}
+  - {fileID: 606489146}
+  - {fileID: 63399653}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3271,6 +3273,11 @@ MonoBehaviour:
   - {fileID: 6433978078352261573, guid: 352be3d8b2808114b86da167c9c9945b, type: 3}
   - {fileID: 3410990731670274440, guid: 6d8a89360470f834eb7b125389cd3f0d, type: 3}
   - {fileID: 792439195708756295, guid: fb6937d734e09df418222c1e4a64a312, type: 3}
+  variantSpawn: 0
+  numbersChooseBlock: 0
+  nBlock: 00000000000000000000000000000000000000000000000000000000
+  SerchShare: 1
+  index: 0
 --- !u!4 &1908293310
 Transform:
   m_ObjectHideFlags: 0
