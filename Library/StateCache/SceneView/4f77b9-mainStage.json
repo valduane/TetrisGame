@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":22.219038009643556,"y":-9.714771270751954,"z":25.015625},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":84.66317749023438,"orthographic":true}
 
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":5.581409454345703,"y":13.064075469970704,"z":-0.2508682310581207},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":37.144256591796878,"orthographic":true}
+>>>>>>> parent of d430873... Some fixex (Best score added)
 =======
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":5.581409454345703,"y":13.064075469970704,"z":-0.2508682310581207},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":37.144256591796878,"orthographic":true}
 >>>>>>> parent of d430873... Some fixex (Best score added)

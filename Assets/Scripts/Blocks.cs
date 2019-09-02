@@ -17,8 +17,11 @@ public class Blocks : MonoBehaviour
     void Start()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> parent of d430873... Some fixex (Best score added)
         //touchpad.site = 0;
         if (!isDontCollide())
 >>>>>>> parent of d430873... Some fixex (Best score added)
@@ -36,7 +39,11 @@ public class Blocks : MonoBehaviour
             Movement();
         Touches();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+        //SpeedStatus();
+>>>>>>> parent of d430873... Some fixex (Best score added)
 =======
         //SpeedStatus();
 >>>>>>> parent of d430873... Some fixex (Best score added)

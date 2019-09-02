@@ -68,8 +68,12 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     x: 937
+=======
+    x: 975
+>>>>>>> parent of d430873... Some fixex (Best score added)
 =======
     x: 975
 >>>>>>> parent of d430873... Some fixex (Best score added)
@@ -101,12 +105,19 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     width: 271
     height: 540
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
 
+=======
+    width: 285
+    height: 540
+  m_MinSize: {x: 202, y: 224}
+  m_MaxSize: {x: 4002, y: 4024}
+>>>>>>> parent of d430873... Some fixex (Best score added)
 =======
     width: 285
     height: 540
@@ -139,10 +150,16 @@ MonoBehaviour:
     width: 975
     height: 351
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   m_MinSize: {x: 232, y: 274}
   m_MaxSize: {x: 10002, y: 10024}
   m_ActualView: {fileID: 13}
+=======
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 18}
+>>>>>>> parent of d430873... Some fixex (Best score added)
 =======
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
@@ -177,8 +194,12 @@ MonoBehaviour:
 
     height: 941
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_MinSize: {x: 950, y: 548}
 
+=======
+  m_MinSize: {x: 950, y: 300}
+>>>>>>> parent of d430873... Some fixex (Best score added)
 =======
   m_MinSize: {x: 950, y: 300}
 >>>>>>> parent of d430873... Some fixex (Best score added)
@@ -248,8 +269,12 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     width: 937
+=======
+    width: 975
+>>>>>>> parent of d430873... Some fixex (Best score added)
 =======
     width: 975
 >>>>>>> parent of d430873... Some fixex (Best score added)
@@ -278,8 +303,12 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     width: 937
+=======
+    width: 975
+>>>>>>> parent of d430873... Some fixex (Best score added)
 =======
     width: 975
 >>>>>>> parent of d430873... Some fixex (Best score added)
@@ -684,16 +713,22 @@ MonoBehaviour:
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     m_HBaseRangeMin: -331
     m_HBaseRangeMax: 331
     m_VBaseRangeMin: -251.5
     m_VBaseRangeMax: 251.5
 =======
+=======
+>>>>>>> parent of d430873... Some fixex (Best score added)
     m_HBaseRangeMin: -669.5
     m_HBaseRangeMax: 669.5
     m_VBaseRangeMin: -360
     m_VBaseRangeMax: 360
+<<<<<<< HEAD
+>>>>>>> parent of d430873... Some fixex (Best score added)
+=======
 >>>>>>> parent of d430873... Some fixex (Best score added)
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
