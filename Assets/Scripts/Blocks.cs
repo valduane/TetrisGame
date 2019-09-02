@@ -16,7 +16,12 @@ public class Blocks : MonoBehaviour
 
     void Start()
     {
+<<<<<<< HEAD
 
+=======
+        //touchpad.site = 0;
+        if (!isDontCollide())
+>>>>>>> parent of d430873... Some fixex (Best score added)
         {
             PlayerPrefs.SetInt("variantSpawn", 0);
             SceneManager.LoadScene("Lose");
@@ -30,7 +35,11 @@ public class Blocks : MonoBehaviour
         if (tag == "Block" || tag == "Square")
             Movement();
         Touches();
+<<<<<<< HEAD
 
+=======
+        //SpeedStatus();
+>>>>>>> parent of d430873... Some fixex (Best score added)
     }
 
     bool isDontCollide()

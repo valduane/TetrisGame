@@ -13,8 +13,8 @@ public class Boundaries : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] TextMeshProUGUI BestScoreText;
     static public float speed;
-    static int BestScore;
-    private int temp = 0;
+    public int BestScore = 0;
+
     void Awake()
     {
         bestScore();
@@ -22,11 +22,11 @@ public class Boundaries : MonoBehaviour
 
     void Start()
     { 
-        BestScoreText.text = BestScore.ToString();
+      //  BestScoreText.text = BestScore.ToString();
         scoreText.text = score.ToString();
     }
 
-
+ 
     void Update()
     {
         scoreText.text = score.ToString();
@@ -90,9 +90,8 @@ public class Boundaries : MonoBehaviour
                 above(y + 1);
                 --y;
                 score += 20;
-                if (Blocks.toFall >= 0.2f)
                 Blocks.toFall -= 0.05f;
-                PlayerPrefs.SetInt("Score", score);
+                PlayerPrefs.SetInt("BestScore", score);
             }
         }
     }
@@ -104,6 +103,7 @@ public class Boundaries : MonoBehaviour
         {
             numb = numb + 100;
             return (speedStat = true);
+            Debug.Log(numb);
         }
         else
             return (speedStat = false);
@@ -112,7 +112,7 @@ public class Boundaries : MonoBehaviour
     void bestScore()
     {
         BestScore = PlayerPrefs.GetInt("TheBestScore");
-        temp = PlayerPrefs.GetInt("Score");
+        int temp = PlayerPrefs.GetInt("BestScore");
         if (temp > BestScore)
         {
             BestScore = temp;
