@@ -16,7 +16,6 @@ public class Blocks : MonoBehaviour
 
     void Start()
     {
-        //touchpad.site = 0;
         if (!isDontCollide())
         {
             int SceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
@@ -31,7 +30,6 @@ public class Blocks : MonoBehaviour
         if (tag == "Block" || tag == "Square")
             Movement();
         Touches();
-        //SpeedStatus();
     }
 
     bool isDontCollide()
