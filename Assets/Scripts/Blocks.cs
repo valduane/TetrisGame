@@ -18,11 +18,8 @@ public class Blocks : MonoBehaviour
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 =======
-=======
->>>>>>> parent of d430873... Some fixex (Best score added)
 =======
 >>>>>>> parent of d430873... Some fixex (Best score added)
         //touchpad.site = 0;
@@ -43,11 +40,7 @@ public class Blocks : MonoBehaviour
         Touches();
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        //SpeedStatus();
->>>>>>> parent of d430873... Some fixex (Best score added)
 =======
         //SpeedStatus();
 >>>>>>> parent of d430873... Some fixex (Best score added)
