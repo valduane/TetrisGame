@@ -8,9 +8,7 @@ TagManager:
   - Left
   - Block
   - Square
-
   - Dead
-
   layers:
   - Default
   - TransparentFX

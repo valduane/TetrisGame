@@ -16,10 +16,10 @@ public class Blocks : MonoBehaviour
 
     void Start()
     {
-
+        if (!isDontCollide())
         {
-            PlayerPrefs.SetInt("variantSpawn", 0);
-            SceneManager.LoadScene("Lose");
+            int SceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+            SceneManager.LoadScene(SceneIndex);
             Boundaries.score = 0;
         }
     }
@@ -30,7 +30,6 @@ public class Blocks : MonoBehaviour
         if (tag == "Block" || tag == "Square")
             Movement();
         Touches();
-
     }
 
     bool isDontCollide()

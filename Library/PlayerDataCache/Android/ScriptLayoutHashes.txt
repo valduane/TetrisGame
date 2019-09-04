@@ -1,6 +1,5 @@
 Android
 PlayerPath?
-
 D:/tetris/TetrisGame/kek.apk
 SceneListBegin?
 Assets/Scenes/StartScene.unity
@@ -147,7 +146,7 @@ b1c2779b00675b422a216132b4b4efc5 Assembly-CSharp.dll:.Boundaries
 e63944317d2f5958e31963668bb29158 Assembly-CSharp.dll:TMPro.Examples.VertexJitter
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.Analytics.Editor.dll:UnityEditor.Analytics.AnalyticsEventTrackerEditor
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
-4d2acfdb588ed546de2ea0812d3fd7fc Assembly-CSharp.dll:.Spawn
+6675c37e54bdfc1c6b0a3b37a9a9f71c Assembly-CSharp.dll:.Spawn
 086b78b98da240efd8cdc9ea875628ee Assembly-CSharp.dll:.Blocks
 4fd8bf02e3089425d3502e26c44ba31a Unity.TextMeshPro.dll:TMPro.TextContainer
 3cae62e09a50c5d5aae8d0536b3d8fde Assembly-CSharp.dll:.ChatController
@@ -230,6 +229,5 @@ c12f6929b034322884ced721fca65b10 Assembly-CSharp.dll:TMPro.Examples.TextMeshProF
 8b1fe5dfdcf943fb3b72506b9f19335f Assembly-CSharp.dll:.EnvMapAnimator
 db630a698dd49f0a2f8082c746c4eaee Assembly-CSharp.dll:Lean.Touch.LeanSpawn
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
-
 82f43ae160a42c8140e740c6271c9bd5 Assembly-CSharp.dll:Lean.Touch.LeanFingerHeld
 330f62fcfa21b2047340eab154927cfc Assembly-CSharp.dll:Lean.Touch.LeanSelectableRendererColor

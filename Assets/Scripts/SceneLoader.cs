@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-
     public void LoadStartScene()
     {
         SceneManager.LoadScene("StartScene");
@@ -28,6 +27,6 @@ public class SceneLoader : MonoBehaviour
 
     public void ChooseOfShare()
     {
-        SceneManager.LoadScene("ChooseOfShare");
+        SceneManager.LoadScene("Choose_of_share");
     }
 }
