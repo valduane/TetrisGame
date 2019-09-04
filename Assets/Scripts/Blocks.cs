@@ -183,26 +183,26 @@ public class Blocks : MonoBehaviour
                 Vector2 posOnScreen = touch.position;
                 if (Screen.orientation == ScreenOrientation.LandscapeLeft)
                 {
-                    if (posOnScreen.x >= 875)
+                    if (posOnScreen.x > Screen.width - (Screen.width / 3))
                         RightMovement();
-                    else if (posOnScreen.x < 480)
+                    else if (posOnScreen.x < Screen.width / 3)
                         LeftMovement();
-                    else if (posOnScreen.y > 380)
+                    else if (posOnScreen.y > Screen.height / 2)
                         Up();
-                    else if (posOnScreen.y < 380)
+                    else if (posOnScreen.y < Screen.height / 2)
                         DownMovement();
                     Debug.Log(posOnScreen);
                     side = Time.time;
                 }
                 else if (Screen.orientation == ScreenOrientation.Portrait)
                 {
-                    if (posOnScreen.x > 480)
+                    if (posOnScreen.x > Screen.width - (Screen.width / 3))
                         RightMovement();
-                    else if (posOnScreen.x < 220)
+                    else if (posOnScreen.x < Screen.width / 3)
                         LeftMovement();
-                    else if (posOnScreen.y > 710 && posOnScreen.x > 220 && posOnScreen.x < 480)
+                    else if (posOnScreen.y > Screen.height/2)
                         Up();
-                    else if (posOnScreen.y < 710 && posOnScreen.x > 220 && posOnScreen.x < 480)
+                    else if (posOnScreen.y < Screen.height / 2)
                         DownMovement();
                     Debug.Log(posOnScreen);
                     side = Time.time;
