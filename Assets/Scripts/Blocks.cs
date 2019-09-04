@@ -176,21 +176,37 @@ public class Blocks : MonoBehaviour
     void Touches()
     {
         if (tag != "Dead")
- { 
-        if (Input.touchCount > 0 && Time.time - side >= 0.3f)
-        {
+ {
+            if (Input.touchCount > 0 && Time.time - side >= 0.3f)
+            {
                 Touch touch = Input.GetTouch(0);
                 Vector2 posOnScreen = touch.position;
-                if (posOnScreen.x >= 875)
-                RightMovement();
-            else if (posOnScreen.x < 480)
-                LeftMovement();
-            else if (posOnScreen.y > 380)
-                    Up();
-                else if (posOnScreen.y < 380)
-                    DownMovement();
-                Debug.Log(posOnScreen);
-                side = Time.time;
+                if (Screen.orientation == ScreenOrientation.LandscapeLeft)
+                {
+                    if (posOnScreen.x >= 875)
+                        RightMovement();
+                    else if (posOnScreen.x < 480)
+                        LeftMovement();
+                    else if (posOnScreen.y > 380)
+                        Up();
+                    else if (posOnScreen.y < 380)
+                        DownMovement();
+                    Debug.Log(posOnScreen);
+                    side = Time.time;
+                }
+                else if (Screen.orientation == ScreenOrientation.Portrait)
+                {
+                    if (posOnScreen.x > 480)
+                        RightMovement();
+                    else if (posOnScreen.x < 220)
+                        LeftMovement();
+                    else if (posOnScreen.y > 710 && posOnScreen.x > 220 && posOnScreen.x < 480)
+                        Up();
+                    else if (posOnScreen.y < 710 && posOnScreen.x > 220 && posOnScreen.x < 480)
+                        DownMovement();
+                    Debug.Log(posOnScreen);
+                    side = Time.time;
+                }
             }
     }
 }
