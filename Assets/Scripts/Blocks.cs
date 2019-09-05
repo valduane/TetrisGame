@@ -139,7 +139,7 @@ public class Blocks : MonoBehaviour
 
     public void DownMovement()
     {
-        if (tag != "Dead")
+        if (tag != "Dead" && falling > 0.2f)
         {
             transform.position += new Vector3(0, -1, 0);
             if (isDontCollide())
